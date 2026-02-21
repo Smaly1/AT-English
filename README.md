@@ -204,7 +204,7 @@ Solo te pido que mantengas el crédito al autor original.
 **Samil Rodriguez**
 
 - Instagram: [@samilrodriquez](https://instagram.com/samilrodriquez)
-- GitHub: [@tu-usuario](https://github.com/Smaly1)
+- GitHub: [@Smaly1](https://github.com/Smaly1)
 
 ---
 

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatizando los Tiempos Verbales Vol. 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        @media print {
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+            body { background-color: white; padding: 0; }
+            .shadow-lg, .shadow-md { box-shadow: none !important; border: 1px solid #e5e7eb; }
+            .max-w-5xl { max-width: 100%; }
+        }
+        .input-line {
+            border: none;
+            border-bottom: 1px solid #d1d5db;
+            width: 100%;
+            background: transparent;
+        }
+        .input-line:focus {
+            outline: none;
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-8">
+        
+        <!-- Header / Portada -->
+        <header class="bg-white p-10 rounded-xl shadow-lg text-center space-y-4 border-t-8 border-blue-600">
+            <h1 class="text-4xl font-black text-gray-800 uppercase tracking-tighter">Automatizando los Tiempos Verbales</h1>
+            <p class="text-xl text-blue-600 font-semibold tracking-widest">VOL. 1 - ENGLISH</p>
+            <div class="flex justify-center items-center space-x-2 text-gray-500 font-medium">
+                <span>By IG @samilrodriquez</span>
+            </div>
+            <!-- Modificado para solo mostrar instrucciones -->
+            <button onclick="showPrintInstructions()" class="no-print mt-4 bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition shadow-lg font-bold">
+                🖨️ Imprimir Cuaderno
+            </button>
+        </header>
+
+        <!-- Introducción -->
+        <section class="bg-white p-8 rounded-xl shadow-md space-y-6">
+            <h2 class="text-2xl font-black border-b-2 border-gray-100 pb-2 text-gray-800">INTRODUCCIÓN</h2>
+            
+            <div class="space-y-4 text-gray-600 leading-relaxed text-justify">
+                <p>
+                    Una de las mayores dificultades al aprender inglés no es la falta de vocabulario, sino la incapacidad de expresar ideas pequeñas con fluidez. Muchas personas saben palabras, pero se bloquean al momento de hablar porque deben pensar demasiado en qué tiempo verbal usar y cómo estructurar la frase. Este bloqueo ocurre porque los tiempos verbales no están <strong>automatizados</strong>.
+                </p>
+                <p>
+                    Cuando no dominamos los tiempos, nuestra mente se detiene a analizar reglas en lugar de comunicar ideas, lo que genera inseguridad, pausas largas y miedo a equivocarse. Esta guía nace a partir de un estudio práctico del idioma, enfocado en los cinco tiempos verbales más utilizados en la comunicación real:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center py-4">
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                    <p class="text-[10px] font-black text-blue-800 uppercase">PRESENT SIMPLE</p>
+                    <p class="text-2xl font-black text-blue-900">57.5%</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                    <p class="text-[10px] font-black text-blue-800 uppercase">PAST SIMPLE</p>
+                    <p class="text-2xl font-black text-blue-900">19.7%</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                    <p class="text-[10px] font-black text-blue-800 uppercase">FUTURE SIMPLE</p>
+                    <p class="text-2xl font-black text-blue-900">8.5%</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                    <p class="text-[10px] font-black text-blue-800 uppercase">PRESENT PERFECT</p>
+                    <p class="text-2xl font-black text-blue-900">6.0%</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                    <p class="text-[10px] font-black text-blue-800 uppercase">CONTINUOUS</p>
+                    <p class="text-2xl font-black text-blue-900">5.1%</p>
+                </div>
+            </div>
+            
+            <div class="text-center py-2">
+                <p class="font-black text-gray-800 text-3xl">96.8% <span class="text-lg font-bold text-gray-500 uppercase tracking-widest">del inglés hablado</span></p>
+            </div>
+
+            <div class="space-y-4 text-gray-600 leading-relaxed text-justify">
+                <p>
+                    Estudios han demostrado que estos son los tiempos verbales más usados en todo el inglés que se habla a diario. El propósito de este cuaderno es ayudarte a reconocer patrones y estructuras clave, para que puedas moverte entre diferentes tiempos sin detenerte a pensar en la gramática. A través de ejemplos simples y repetitivos, este material te permitirá comenzar a formar ideas cortas, claras y funcionales, sentando las bases para una fluidez real.
+                </p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg mt-6 shadow-sm">
+                    <p class="font-black text-amber-900 mb-2 flex items-center">
+                        <span class="mr-2 text-xl">💡</span> MÉTODO GRADUAL
+                    </p>
+                    <p class="text-amber-900 font-medium italic">
+                        "Cuando domines los tiempos con estos 5 verbos, avanzas a 10, y luego a 20. Debes ir de forma gradual para que sea efectivo."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 3 - Formas de los Verbos y Contracciones -->
+        <section class="bg-white p-8 rounded-xl shadow-md space-y-8 page-break">
+            <div class="border-b-4 border-blue-600 pb-2">
+                <h2 class="text-2xl font-black text-gray-800 uppercase">Las formas de los 3 verbos auxiliares más importantes</h2>
+                <p class="text-sm text-gray-500 font-medium italic mt-1 text-justify">
+                    Antes de entrar en los ejercicios de automatización, he dedicado esta hoja a mostrarte todos los cambios que puede sufrir el verbo en inglés, junto con todas las contracciones más comunes que se usan en la comunicación real.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Verbo TO BE -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-blue-600 p-2 text-white text-center font-black uppercase text-sm">Verbo TO BE</div>
+                    <div class="p-3 space-y-1 text-xs font-bold text-gray-700 bg-gray-50">
+                        <p>Infinitivo: <span class="text-blue-600">to be</span></p>
+                        <p>Base: <span class="text-blue-600">be</span></p>
+                        <p>Presente: <span class="text-blue-600">am/is/are</span></p>
+                        <p>Pasado: <span class="text-blue-600">was/were</span></p>
+                        <p>Participio: <span class="text-blue-600">been</span></p>
+                        <p>Gerundio: <span class="text-blue-600">being</span></p>
+                    </div>
+                </div>
+                <!-- Verbo TO HAVE -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-blue-600 p-2 text-white text-center font-black uppercase text-sm">Verbo TO HAVE</div>
+                    <div class="p-3 space-y-1 text-xs font-bold text-gray-700 bg-gray-50">
+                        <p>Infinitivo: <span class="text-blue-600">to have</span></p>
+                        <p>Base: <span class="text-blue-600">have</span></p>
+                        <p>Presente: <span class="text-blue-600">have/has</span></p>
+                        <p>Pasado: <span class="text-blue-600">had</span></p>
+                        <p>Participio: <span class="text-blue-600">had</span></p>
+                        <p>Gerundio: <span class="text-blue-600">having</span></p>
+                    </div>
+                </div>
+                <!-- Verbo TO DO -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-blue-600 p-2 text-white text-center font-black uppercase text-sm">Verbo TO DO</div>
+                    <div class="p-3 space-y-1 text-xs font-bold text-gray-700 bg-gray-50">
+                        <p>Infinitivo: <span class="text-blue-600">to do</span></p>
+                        <p>Base: <span class="text-blue-600">do</span></p>
+                        <p>Presente: <span class="text-blue-600">do/does</span></p>
+                        <p>Pasado: <span class="text-blue-600">did</span></p>
+                        <p>Participio: <span class="text-blue-600">done</span></p>
+                        <p>Gerundio: <span class="text-blue-600">doing</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-xl font-black text-gray-800 uppercase tracking-tighter">Las contracciones con auxiliares + not</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-red-50 p-3 rounded-lg border border-red-100 text-xs font-black">
+                        <p class="text-red-800 border-b border-red-200 mb-2 uppercase tracking-widest">TO BE</p>
+                        <p class="flex justify-between">is not <span>isn't</span></p>
+                        <p class="flex justify-between">are not <span>aren't</span></p>
+                        <p class="flex justify-between">was not <span>wasn't</span></p>
+                        <p class="flex justify-between">were not <span>weren't</span></p>
+                    </div>
+                    <div class="bg-red-50 p-3 rounded-lg border border-red-100 text-xs font-black">
+                        <p class="text-red-800 border-b border-red-200 mb-2 uppercase tracking-widest">TO HAVE</p>
+                        <p class="flex justify-between">have not <span>haven't</span></p>
+                        <p class="flex justify-between">has not <span>hasn't</span></p>
+                        <p class="flex justify-between">had not <span>hadn't</span></p>
+                    </div>
+                    <div class="bg-red-50 p-3 rounded-lg border border-red-100 text-xs font-black">
+                        <p class="text-red-800 border-b border-red-200 mb-2 uppercase tracking-widest">TO DO</p>
+                        <p class="flex justify-between">do not <span>don't</span></p>
+                        <p class="flex justify-between">does not <span>doesn't</span></p>
+                        <p class="flex justify-between">did not <span>didn't</span></p>
+                    </div>
+                    <div class="bg-red-50 p-3 rounded-lg border border-red-100 text-xs font-black">
+                        <p class="text-red-800 border-b border-red-200 mb-2 uppercase tracking-widest">FUTURO</p>
+                        <p class="flex justify-between">will not <span>won't</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-xl font-black text-gray-800 uppercase tracking-tighter">Las contracciones de pronombres + auxiliares principales</h3>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-[10px] font-bold">
+                    <div class="bg-gray-100 p-2 rounded">
+                        <p class="border-b border-gray-300 mb-1 text-blue-600 uppercase">TO BE</p>
+                        <p>I am → I'm</p>
+                        <p>You are → You're</p>
+                        <p>He is → He's</p>
+                        <p>She is → She's</p>
+                        <p>It is → It's</p>
+                        <p>We are → We're</p>
+                        <p>They are → They're</p>
+                    </div>
+                    <div class="bg-gray-100 p-2 rounded">
+                        <p class="border-b border-gray-300 mb-1 text-blue-600 uppercase">TO HAVE</p>
+                        <p>I have → I've</p>
+                        <p>You have → You've</p>
+                        <p>He has → He's</p>
+                        <p>She has → She's</p>
+                        <p>It has → It's</p>
+                        <p>We have → We've</p>
+                        <p>They have → They've</p>
+                    </div>
+                    <div class="bg-gray-100 p-2 rounded">
+                        <p class="border-b border-gray-300 mb-1 text-blue-600 uppercase text-[9px]">WILL (Futuro)</p>
+                        <p>I will → I'll</p>
+                        <p>You will → You'll</p>
+                        <p>He will → He'll</p>
+                        <p>She will → She'll</p>
+                        <p>It will → It'll</p>
+                        <p>We will → We'll</p>
+                        <p>They will → They'll</p>
+                    </div>
+                    <div class="bg-gray-100 p-2 rounded">
+                        <p class="border-b border-gray-300 mb-1 text-blue-600 uppercase">WOULD</p>
+                        <p>I would → I'd</p>
+                        <p>You would → You'd</p>
+                        <p>He would → He'd</p>
+                        <p>She would → She'd</p>
+                        <p>It would → It'd</p>
+                        <p>We would → We'd</p>
+                        <p>They would → They'd</p>
+                    </div>
+                    <div class="bg-gray-100 p-2 rounded">
+                        <p class="border-b border-gray-300 mb-1 text-blue-600 uppercase">HAD</p>
+                        <p>I had → I'd</p>
+                        <p>You had → You'd</p>
+                        <p>He had → He'd</p>
+                        <p>She had → She'd</p>
+                        <p>It had → It'd</p>
+                        <p>We had → We'd</p>
+                        <p>They had → They'd</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-blue-50 border-2 border-blue-200 p-4 rounded-xl text-xs leading-relaxed italic text-blue-900 font-medium text-justify">
+                    <p class="mb-2"><strong>NOTA:</strong> Las contracciones no son opcionales en el inglés hablado, son la norma. Reconocerlas y usarlas permite pensar más rápido y hablar sin pausas. El objetivo de esta página es que puedas auxiliarte de ella cuando sea necesario, ya que de manera visual te ayudará mucho a la hora de poner en práctica la lectura de cualquier contenido. Los ejercicios a continuación no necesariamente serán contraídos, debemos ejercitar nuestra escritura y lectura en voz alta primero en la forma básica de escribir y luego con la práctica avanzamos a las contracciones.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-xl text-white text-[10px] uppercase tracking-widest text-center font-black">
+                    DATO IMPORTANTE: EL OBJETIVO ES LA FLUIDEZ, NO LA PERFECCIÓN GRAMATICAL.
+                </div>
+            </div>
+        </section>
+
+        <!-- Bloque Generador de Tiempos Verbales -->
+        <div id="practice-sections" class="space-y-12">
+            <!-- Las secciones se generan aquí con JS -->
+        </div>
+
+    </div>
+
+    <!-- Modal de Instrucciones de Impresión -->
+    <div id="print-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 no-print backdrop-blur-sm transition-opacity">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md text-center space-y-5 border-t-8 border-blue-600 mx-4">
+            <h3 class="text-3xl font-black text-gray-800 tracking-tight text-center">🖨️ INSTRUCCIONES DE IMPRESIÓN</h3>
+            <p class="text-gray-600 font-medium">
+                Sigue estos pasos manuales para imprimir tu cuaderno correctamente:
+            </p>
+            <div class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-left shadow-inner">
+                <ul class="space-y-4 text-gray-700 font-bold">
+                    <li class="flex items-start">
+                        <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-3 text-xs shrink-0 mt-0.5">1</span> 
+                        <span>Presiona el comando <kbd class="bg-white px-2 py-1 rounded border shadow-sm mx-1">Ctrl + P</kbd> (o <kbd class="bg-white px-2 py-1 rounded border shadow-sm mx-1">Cmd + P</kbd> en Mac).</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-3 text-xs shrink-0 mt-0.5">2</span> 
+                        <span>En la sección de "Destino", elige tu impresora física o selecciona <strong>"Guardar como PDF"</strong>.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-3 text-xs shrink-0 mt-0.5">3</span> 
+                        <span>Entra en "Más ajustes" y asegúrate de activar la casilla de <strong>"Gráficos de fondo"</strong> para mantener los colores y seleccionar <strong>"Tabloide"</strong> en <strong>"Tamaño de papel"</strong>.</span>
+                    </li>
+                </ul>
+            </div>
+            <button onclick="closePrintModal()" class="mt-4 bg-gray-800 text-white px-6 py-4 rounded-xl hover:bg-black transition w-full font-black shadow-md uppercase tracking-widest">
+                ¡Entendido!
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const verbosBasicos = "to come, to go, to put, to take, to give, to get, to seem, to say, to make, to do, to keep, to let, to see, to send, to be, to have, to know, to tell, to call, to drive, to read, to write, to eat, to speak, to need, to think, to work, to study, to play, to like, to listen, to watch, to walk";
+
+        const tiempos = [
+            {
+                titulo: "PRESENTE SIMPLE",
+                uso: "DESCRIBE COSAS QUE PASAN.",
+                formula: {
+                    pos: "Sujeto + Verbo (presente) + Complemento",
+                    neg: "Sujeto + do/does not + Verbo (base) + Complemento",
+                    int: "Do/does + Sujeto + Verbo (base) + Complemento?"
+                },
+                keywords: "every (day/week/month/year), usually, never, always, often",
+                conectores: "normally, most of the time, in general, sometimes",
+                ejemplos: [
+                    { type: '+', text: 'I work every day' },
+                    { type: '-', text: 'I do not work every day' },
+                    { type: '?', text: 'Does he study in the morning?' }
+                ]
+            },
+            {
+                titulo: "PASADO SIMPLE",
+                uso: "DESCRIBE COSAS QUE PASARON.",
+                formula: {
+                    pos: "Sujeto + Verbo (pasado) + Complemento",
+                    neg: "Sujeto + did not + Verbo (base) + Complemento",
+                    int: "Did + Sujeto + Verbo (base) + Complemento?"
+                },
+                keywords: "yesterday, last (night/week/month), ago",
+                conectores: "At that time, when, one day, in 2020, then",
+                ejemplos: [
+                    { type: '+', text: 'You worked yesterday' },
+                    { type: '-', text: 'I did not eat an apple yesterday' },
+                    { type: '?', text: 'Did you work last week?' }
+                ]
+            },
+            {
+                titulo: "FUTURO SIMPLE",
+                uso: "DESCRIBE COSAS QUE PASARÁN.",
+                formula: {
+                    pos: "Sujeto + will + Verbo (base) + Complemento",
+                    neg: "Sujeto + will not + Verbo (base) + Complemento",
+                    int: "Will + Sujeto + Verbo (base) + Complemento?"
+                },
+                keywords: "tomorrow, in a (week/month/year), on (monday, tuesday)",
+                conectores: "soon, in the future, later, eventually, probably, I think, next (week/years/month)",
+                ejemplos: [
+                    { type: '+', text: 'I will go tomorrow' },
+                    { type: '-', text: 'We will not run tomorrow' },
+                    { type: '?', text: 'Will they send the letter tonight?' }
+                ]
+            },
+            {
+                titulo: "PRESENTE PERFECTO",
+                uso: "DESCRIBE COSAS QUE HAN PASADO.",
+                formula: {
+                    pos: "Sujeto + have/has + Verbo (participio) + Complemento",
+                    neg: "Sujeto + have/has not + Verbo (participio) + Complemento",
+                    int: "Have/has + Sujeto + Verbo (participio) + Complemento?"
+                },
+                keywords: "for, since, yet, never, always, already, so far",
+                conectores: "just, ever, recently, lately, until now, up to now",
+                ejemplos: [
+                    { type: '+', text: 'I have worked all day' },
+                    { type: '-', text: 'I have not eaten all my food' },
+                    { type: '?', text: 'Have you worked all day?' }
+                ]
+            },
+            {
+                titulo: "PRESENTE CONTINUO",
+                uso: "DESCRIBE COSAS QUE ESTÁN PASANDO.",
+                formula: {
+                    pos: "Sujeto + am/is/are + Verbo (ing) + Complemento",
+                    neg: "Sujeto + am/is/are not + Verbo (ing) + Complemento",
+                    int: "Am/is/are + Sujeto + Verbo (ing) + Complemento?"
+                },
+                keywords: "now, right now, at this moment",
+                conectores: "at the moment, these days, nowadays, today, at present, this week, currently, for the moment",
+                ejemplos: [
+                    { type: '+', text: 'I am eating a pizza' },
+                    { type: '-', text: 'They are not learning english' },
+                    { type: '?', text: 'Are they working today?' }
+                ]
+            }
+        ];
+
+        const container = document.getElementById('practice-sections');
+
+        tiempos.forEach(t => {
+            const section = document.createElement('section');
+            section.className = "bg-white p-8 rounded-xl shadow-md space-y-6 page-break";
+            
+            const ejemplosHTML = t.ejemplos.map(ej => `
+                <tr class="bg-blue-50/20">
+                    <td class="p-2 border border-gray-200 text-center font-black text-blue-600">
+                        ${ej.type}
+                    </td>
+                    <td class="p-2 border border-gray-200 italic text-gray-700">
+                        ${ej.text}
+                    </td>
+                </tr>
+            `).join('');
+
+            const vaciosHTML = Array(9).fill(0).map((_, i) => {
+                const type = (i + t.ejemplos.length) % 3 === 0 ? '+' : ((i + t.ejemplos.length) % 3 === 1 ? '-' : '?');
+                return `
+                <tr>
+                    <td class="p-2 border border-gray-200 text-center font-black text-gray-400">
+                        ${type}
+                    </td>
+                    <td class="p-2 border border-gray-200">
+                        <input type="text" class="input-line h-8" placeholder="...">
+                    </td>
+                </tr>
+                `;
+            }).join('');
+
+            section.innerHTML = `
+                <div class="flex justify-between items-center border-b-4 border-blue-600 pb-2">
+                    <h2 class="text-3xl font-black text-gray-800 tracking-tighter uppercase">${t.titulo}</h2>
+                    <span class="text-[10px] bg-blue-600 px-3 py-1 rounded-full text-white uppercase font-black tracking-widest">Sentences Practice</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-[11px] leading-tight">
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-100 space-y-2">
+                        <div><p class="font-black text-blue-800 uppercase tracking-widest">Apuntes:</p><p class="text-gray-700">${t.uso}</p></div>
+                        <div><p class="font-black text-blue-800 uppercase tracking-widest mt-2">Palabras Claves:</p><p class="text-gray-700">${t.keywords}</p></div>
+                        <div><p class="font-black text-blue-800 uppercase tracking-widest mt-2">Conectores:</p><p class="text-gray-700 font-bold">${t.conectores}</p></div>
+                    </div>
+                    <div class="bg-green-50/50 p-4 rounded-lg border border-green-100 space-y-2">
+                        <p class="font-black text-green-800 uppercase tracking-widest mb-1">Estructuras:</p>
+                        <p class="font-bold text-gray-700 bg-white/50 p-1 rounded border border-green-200/50"><span class="text-green-600 mr-1">(+)</span> ${t.formula.pos}</p>
+                        <p class="font-bold text-gray-700 bg-white/50 p-1 rounded border border-green-200/50 mt-1"><span class="text-red-600 mr-1">(-)</span> ${t.formula.neg}</p>
+                        <p class="font-bold text-gray-700 bg-white/50 p-1 rounded border border-green-200/50 mt-1"><span class="text-blue-600 mr-1">(?)</span> ${t.formula.int}</p>
+                    </div>
+                    <div class="bg-orange-50/50 p-4 rounded-lg border border-orange-100">
+                        <p class="font-black text-orange-800 uppercase tracking-widest mb-1">Verbos Básicos:</p>
+                        <p class="text-[10px] leading-relaxed text-gray-600 font-medium italic">${verbosBasicos}</p>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <table class="w-full text-sm border-collapse border border-gray-200 shadow-sm">
+                        <thead>
+                            <tr class="bg-gray-800 text-white">
+                                <th class="p-3 text-center w-16 uppercase font-black text-xs tracking-widest border border-gray-700">Type</th>
+                                <th class="p-3 text-left uppercase font-black text-xs tracking-widest border border-gray-700">Write your sentence here...</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body-${t.titulo.replace(' ', '')}">
+                            ${ejemplosHTML}
+                            ${vaciosHTML}
+                        </tbody>
+                    </table>
+                    <button onclick="addRows('${t.titulo.replace(' ', '')}')" class="no-print mt-3 text-blue-600 text-xs font-black hover:text-blue-800 transition flex items-center">
+                        <span class="mr-1 text-lg leading-none">+</span> AGREGAR MÁS LÍNEAS
+                    </button>
+                </div>
+            `;
+            container.appendChild(section);
+        });
+
+        function addRows(id) {
+            const tbody = document.getElementById(`table-body-${id}`);
+            const currentCount = tbody.children.length;
+            for(let i=0; i<3; i++) {
+                const row = document.createElement('tr');
+                const type = (currentCount + i) % 3 === 0 ? '+' : ((currentCount + i) % 3 === 1 ? '-' : '?');
+                row.innerHTML = `
+                    <td class="p-2 border border-gray-200 text-center font-black text-gray-400">${type}</td>
+                    <td class="p-2 border border-gray-200"><input type="text" class="input-line h-8" placeholder="..."></td>
+                `;
+                tbody.appendChild(row);
+            }
+        }
+
+        // Función solo muestra el modal
+        function showPrintInstructions() {
+            document.getElementById('print-modal').classList.remove('hidden');
+        }
+
+        function closePrintModal() {
+            document.getElementById('print-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

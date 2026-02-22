@@ -9,7 +9,7 @@
 
 **Una guía práctica y científica para dominar los tiempos verbales en inglés con fluidez natural**
 
-[📖 Ver Demo](#-demo) • [🎯 Características](#-características) • [🚀 Uso](#-cómo-usar) • [📊 Método](#-metodología)
+[🌐 Ver en Vivo](https://smaly1.github.io/AT-English/) • [🎯 Características](#-características) • [🚀 Uso](#-cómo-usar) • [📊 Método](#-metodología)
 
 ---
 
@@ -74,6 +74,13 @@ Este cuaderno se enfoca en los **5 tiempos verbales más usados** en el inglés 
 ---
 
 ## 🚀 Cómo Usar
+
+### Opción 0: Ver en Vivo (GitHub Pages) ⭐
+Accede directamente desde el navegador sin descargar nada:
+👉 **[https://smaly1.github.io/AT-English/](https://smaly1.github.io/AT-English/)**
+
+> **Nota:** Si el enlace no funciona, asegúrate de que GitHub Pages esté activado en la configuración del repositorio:
+> `Settings → Pages → Build and deployment → Source → Deploy from a branch → main / (root) → Save`
 
 ### Opción 1: Uso Directo (Recomendado)
 1. Descarga el archivo `Automatizando los Tiempos Verbales.html`
